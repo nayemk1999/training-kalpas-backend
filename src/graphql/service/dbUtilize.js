@@ -3,10 +3,10 @@ const { connectUserdb } = require("../../db/db");
 
 const db = connectUserdb();
 
-async function getAllProducts(limit, page) {
+async function getAllProducts(limit, page, filter) {
   try {
     let products = new Promise((resolve, reject) => {
-      let sql = `SELECT * FROM products`;
+      let sql = `SELECT * FROM products limit ${limit} offset ${page}`;
       db.query(sql, (err, result) => {
         resolve(JSON.parse(JSON.stringify(result)));
       });
@@ -88,10 +88,10 @@ async function addProductFun(value) {
   }
 }
 
-async function getAllUsers(limit, page) {
+async function getAllUsers(limit, page, filter) {
   try {
     let users = new Promise((resolve, reject) => {
-      let sql = `SELECT * FROM users`;
+      let sql = `SELECT * FROM users limit ${limit} offset ${page}`;
       db.query(sql, (err, result) => {
         resolve(JSON.parse(JSON.stringify(result)));
       });

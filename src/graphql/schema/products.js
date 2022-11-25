@@ -1,5 +1,6 @@
 const { gql } = require("apollo-server-express");
 const typeDefs = gql`
+  scalar Timestamp
   type Product {
     id: ID!
     image: String
@@ -11,6 +12,8 @@ const typeDefs = gql`
     postedby: String
     title: String
     status: String
+    createAt: Timestamp
+    updateAt: Timestamp
   }
   input AddProduct {
     image: String
