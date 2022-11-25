@@ -1,0 +1,22 @@
+{
+  "name": "training-backend-kalpas",
+  "version": "1.0.0",
+  "description": "nayem khan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nayem khan",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.11.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^14.7.0",
+    "graphql-scalars": "^1.20.1",
+    "join-monster": "^3.1.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
